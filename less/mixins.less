@@ -1,1 +1,17 @@
 // Mixins in here
+
+.display-flex (@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.btn-decor(@b-color, @t-color, @padding, @border-radius) {
+
+    padding: @padding 0;
+    background-color: @b-color;
+    color: @t-color;
+    text-align: center;
+    border-radius: @border-radius;
+    font-size: 15px;
+}
