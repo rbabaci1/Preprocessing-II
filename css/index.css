@@ -135,6 +135,7 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(#9fd3da, #351542);
 }
 h1,
 h2,
@@ -168,7 +169,16 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@keyframes pulse {
+  0% {
+    background-color: #9bdef3;
+  }
+  100% {
+    background-color: #424899;
+  }
+}
 .navigation {
+  animation: pulse 5s infinite;
   padding: 20px 0;
   border-bottom: 2px dashed #C0C0C0;
 }
@@ -310,4 +320,82 @@ img {
     width: 80%;
     margin: 0 10% 30px 10%;
   }
+}
+form h1 {
+  text-align: center;
+  color: #531616;
+  font-size: 5rem;
+  padding: 20px 0;
+  background-color: #598ed7;
+  text-shadow: 2px 2px pink;
+  margin-top: 50px;
+}
+.contact {
+  background-color: #76a2de;
+}
+.contact .wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact .wrapper .package {
+  text-align: center;
+  line-height: 40px;
+  padding: 20px 0;
+}
+.contact .wrapper .package h2 {
+  font-size: 3.5rem;
+}
+.contact .wrapper .package #select-package {
+  font-size: 2rem;
+  background-color: #0e9eb1;
+  color: #fcf9f4;
+  width: 210px;
+  margin: 15px 0;
+}
+.contact .wrapper .top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.contact .wrapper .top div {
+  width: 33%;
+}
+.contact .wrapper .top input {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #598ed7;
+  border-radius: 5px;
+  font-size: 20px;
+}
+@media (max-width: 500px) {
+  .contact .wrapper .top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .wrapper .top div {
+    width: 60%;
+  }
+  .contact .wrapper .top input {
+    margin-bottom: 2rem;
+  }
+}
+.contact .wrapper .bottom {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 0;
+}
+.contact .wrapper .bottom #instructions {
+  width: 100%;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+.contact .wrapper .bottom #button {
+  padding: 10px 50px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  color: white;
+  background: #598ed7;
 }
